@@ -6,9 +6,9 @@ class BooksLogicAudio(PybaLogic):
         super().__init__()
 
     # get
-    def getBooksByName(self, id):
+    def getBooksByName(self, name):
         database = self.createDatabaseObj()
-        sql = f"SELECT * FROM heroku_505461be12611e0.audio where nombre = '{id}';"
+        sql = f"SELECT * FROM heroku_505461be12611e0.audio where nombre = '{name}';"
         result = database.executeQuery(sql)
         if len(result) != 0:
             return result[0]
