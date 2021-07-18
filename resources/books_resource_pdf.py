@@ -18,7 +18,3 @@ class BooksPdf(Resource):
     def get(self, nombre):
         result = self.logic.getBooksByName(nombre)
         return result, 200
-
-    def post(self, name):
-        result = self.logic.getBooksById(name)
-        return result, 200
